@@ -65,6 +65,7 @@ class ConfigRepository implements ArrayAccess
     /**
      * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($key)
     {
         return isset($this->config[$key]);
