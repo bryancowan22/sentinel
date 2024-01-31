@@ -74,6 +74,7 @@ class ConfigRepository implements ArrayAccess
     /**
      * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($key)
     {
         return $this->config[$key];
@@ -82,6 +83,7 @@ class ConfigRepository implements ArrayAccess
     /**
      * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($key, $value)
     {
         $this->config[$key] = $value;
@@ -90,6 +92,7 @@ class ConfigRepository implements ArrayAccess
     /**
      * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($key)
     {
         unset($this->config[$key]);
